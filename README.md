@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# My react-test App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My react-test App is a React application that allows users to view various items such as movies, TV shows, etc. The application uses Bootstrap for styling and allows searching, filtering, and sorting of items.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Display different items with image, name, and year.
+- Search items by name and year.
+- Sort items in ascending or descending order by name.
+- Toggle between grid view and list view.
+- Update item name by double-clicking.
+- Display items by different categories using tabs.
+- Handle broken images and display a default image.
+- Hover animation on images.
+- State management using Redux.
+- API service for data fetching.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone this repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    ```bash
+    git clone https://github.com/hana-task/react-test.git
+    ```
 
-### `npm test`
+2. Navigate to the project directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    cd react-test
+    ```
 
-### `npm run build`
+3. Install dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the application:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm start
+    ```
 
-### `npm run eject`
+   The app will open in your browser at `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `src/`
+    - `components/`
+        - `Home.js` : Component to display the main page.
+        - `Tabs.js`: Component for displaying tabs.
+        - `Tab.js`: Single tab component.
+        - `ItemsList.js`: Component for displaying a list of items.
+        - `EditableItem.js`: Component for displaying a single item with editable name.
+        - `ItemDetails.js`: Component for displaying item details.
+        - `YearFormatted.js` : Component to display the date string at friendly format
+    - `store/`
+        - `reducer.js`: Redux reducer for state management.
+        - `store.js`: Redux store configuration.
+    - `services/`
+        - `apiService.js`: Service for API calls.
+    - `App.js`: Main component of the application.
+    - `App.css`: Custom CSS file.
+    - `index.js`: Entry point of the React application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Search Items:
+    - Use the search field to search items by name or year.
+    - Click the "Clear" button to reset the search field.
 
-## Learn More
+2. Toggle Views:
+    - Click the "Switch to List View" or "Switch to Grid View" button to change the view of the items.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Sort Items:
+    - Click the "Sort Ascending" or "Sort Descending" button to sort the items in ascending or descending order by name.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Refresh Data:
+    - Click the "Refresh Data" button to reload data from the server.
 
-### Code Splitting
+5. Edit Items:
+    - Double-click on the item name to edit it.
+    - After editing, click outside the text field to save the change.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## API Service
 
-### Analyzing the Bundle Size
+The `apiService` function in `src/services/apiService.js` is used for making API calls. It supports `GET` and `POST` methods.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## State Management with Redux
 
-### Making a Progressive Web App
+The Redux store and reducer are located in `src/store`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## System Requirements
 
-### Advanced Configuration
+- Node.js
+- Npm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Technologies Used
 
-### Deployment
+- React
+- Redux
+- React Router
+- Bootstrap
+- date-fns
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Notes
+Add the `response.json` file to the `public` folder to provide data for the application.
